@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0066CC;
+  /* blue-600 */
+  --color-primary-50: #E6F2FF;
+  /* blue-50 */
+  --color-primary-100: #CCE5FF;
+  /* blue-100 */
+  --color-primary-200: #99CCFF;
+  /* blue-200 */
+  --color-primary-300: #66B2FF;
+  /* blue-300 */
+  --color-primary-400: #3399FF;
+  /* blue-400 */
+  --color-primary-500: #0066CC;
+  /* blue-500 */
+  --color-primary-600: #0066CC;
+  /* blue-600 */
+  --color-primary-700: #004499;
+  /* blue-700 */
+  --color-primary-800: #003366;
+  /* blue-800 */
+  --color-primary-900: #002244;
+  /* blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #4A90E2;
+  /* blue-400 */
+  --color-secondary-50: #EBF4FD;
+  /* blue-50 */
+  --color-secondary-100: #D7E9FB;
+  /* blue-100 */
+  --color-secondary-200: #B0D3F7;
+  /* blue-200 */
+  --color-secondary-300: #88BDF3;
+  /* blue-300 */
+  --color-secondary-400: #4A90E2;
+  /* blue-400 */
+  --color-secondary-500: #3B82F6;
+  /* blue-500 */
+  --color-secondary-600: #2563EB;
+  /* blue-600 */
+  --color-secondary-700: #1D4ED8;
+  /* blue-700 */
+  --color-secondary-800: #1E40AF;
+  /* blue-800 */
+  --color-secondary-900: #1E3A8A;
+  /* blue-900 */
+
+  /* Accent Colors */
+  --color-accent: #003D7A;
+  /* blue-900 */
+  --color-accent-50: #E6F0FF;
+  /* blue-50 */
+  --color-accent-100: #CCE0FF;
+  /* blue-100 */
+  --color-accent-200: #99C2FF;
+  /* blue-200 */
+  --color-accent-300: #66A3FF;
+  /* blue-300 */
+  --color-accent-400: #3385FF;
+  /* blue-400 */
+  --color-accent-500: #0066CC;
+  /* blue-500 */
+  --color-accent-600: #0052A3;
+  /* blue-600 */
+  --color-accent-700: #003D7A;
+  /* blue-700 */
+  --color-accent-800: #002952;
+  /* blue-800 */
+  --color-accent-900: #001429;
+  /* blue-900 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF;
+  /* white */
+  --color-surface: #F8F9FA;
+  /* gray-50 */
+  --color-surface-100: #F1F3F4;
+  /* gray-100 */
+  --color-surface-200: #E8EAED;
+  /* gray-200 */
+  --color-surface-300: #DADCE0;
+  /* gray-300 */
+
+  /* Text Colors */
+  --color-text-primary: #1A1A1A;
+  /* gray-900 */
+  --color-text-secondary: #666666;
+  /* gray-600 */
+  --color-text-tertiary: #9AA0A6;
+  /* gray-500 */
+  --color-text-disabled: #DADCE0;
+  /* gray-300 */
+
+  /* Status Colors */
+  --color-success: #28A745;
+  /* green-600 */
+  --color-success-50: #F0FDF4;
+  /* green-50 */
+  --color-success-100: #DCFCE7;
+  /* green-100 */
+  --color-success-200: #BBF7D0;
+  /* green-200 */
+  --color-success-300: #86EFAC;
+  /* green-300 */
+  --color-success-400: #4ADE80;
+  /* green-400 */
+  --color-success-500: #22C55E;
+  /* green-500 */
+  --color-success-600: #28A745;
+  /* green-600 */
+  --color-success-700: #15803D;
+  /* green-700 */
+  --color-success-800: #166534;
+  /* green-800 */
+  --color-success-900: #14532D;
+  /* green-900 */
+
+  --color-warning: #FFC107;
+  /* yellow-500 */
+  --color-warning-50: #FEFCE8;
+  /* yellow-50 */
+  --color-warning-100: #FEF3C7;
+  /* yellow-100 */
+  --color-warning-200: #FDE68A;
+  /* yellow-200 */
+  --color-warning-300: #FCD34D;
+  /* yellow-300 */
+  --color-warning-400: #FBBF24;
+  /* yellow-400 */
+  --color-warning-500: #FFC107;
+  /* yellow-500 */
+  --color-warning-600: #D97706;
+  /* yellow-600 */
+  --color-warning-700: #B45309;
+  /* yellow-700 */
+  --color-warning-800: #92400E;
+  /* yellow-800 */
+  --color-warning-900: #78350F;
+  /* yellow-900 */
+
+  --color-error: #DC3545;
+  /* red-600 */
+  --color-error-50: #FEF2F2;
+  /* red-50 */
+  --color-error-100: #FEE2E2;
+  /* red-100 */
+  --color-error-200: #FECACA;
+  /* red-200 */
+  --color-error-300: #FCA5A5;
+  /* red-300 */
+  --color-error-400: #F87171;
+  /* red-400 */
+  --color-error-500: #EF4444;
+  /* red-500 */
+  --color-error-600: #DC3545;
+  /* red-600 */
+  --color-error-700: #B91C1C;
+  /* red-700 */
+  --color-error-800: #991B1B;
+  /* red-800 */
+  --color-error-900: #7F1D1D;
+  /* red-900 */
+
+  /* Border Colors */
+  --color-border: #E5E5E5;
+  /* gray-300 */
+  --color-border-light: #F0F0F0;
+  /* gray-200 */
+  --color-border-dark: #D0D0D0;
+  /* gray-400 */
+
+  /* Shadow Variables */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-primary: 0 4px 8px rgba(0, 102, 204, 0.2);
+  --shadow-primary-lg: 0 8px 16px rgba(0, 102, 204, 0.15);
+
+  /* Transition Variables */
+  --transition-fast: 250ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-text-primary bg-background antialiased;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-inter font-semibold text-text-primary;
+    line-height: 1.3;
+  }
+
+  p {
+    @apply text-text-secondary;
+    line-height: 1.6;
+  }
+
+  button {
+    @apply font-inter font-semibold;
+    transition: all var(--transition-base);
+  }
+
+  input,
+  textarea,
+  select {
+    @apply font-inter;
+    transition: all var(--transition-base);
+  }
+
+  a {
+    @apply text-primary hover:text-accent;
+    transition: color var(--transition-base);
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-accent hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+    @apply transition-all duration-300 ease-in-out;
+    box-shadow: var(--shadow-primary);
+  }
+
+  .btn-primary:hover {
+    box-shadow: var(--shadow-primary-lg);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-primary hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50;
+    @apply transition-all duration-300 ease-in-out;
+    box-shadow: var(--shadow-base);
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-primary hover:text-white hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .card {
+    @apply bg-white rounded-lg p-6;
+    box-shadow: var(--shadow-base);
+    transition: all var(--transition-base);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-border rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  }
+
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-pattern {
+    background-image: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 61, 122, 0.05) 100%);
+  }
+
+  .surface-elevated {
+    @apply bg-surface;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .border-custom {
+    border-color: var(--color-border);
+  }
+
+  .border-custom-light {
+    border-color: var(--color-border-light);
+  }
+
+  /* Infinite Scroll Animation */
+  @keyframes slide-scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    display: flex;
+    width: max-content;
+    /* Ensure container is wide enough */
+    animation: slide-scroll 15s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .shadow-custom {
+    box-shadow: var(--shadow-base);
+  }
+
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .transition-custom {
+    transition: all var(--transition-base);
+  }
+
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.02);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Responsive Design Helpers */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-12 px-4;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
