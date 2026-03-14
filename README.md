@@ -1,47 +1,67 @@
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+# Betty Pride Website
 
-## 🚀 Features
+Static marketing website for Betty Pride garment manufacturing.
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
+## Stack
 
-## 📋 Prerequisites
+- HTML5 pages (`index.html`, `pages/*.html`)
+- Custom stylesheet: `css/site.css` (currently used by all pages)
+- Optional Tailwind source: `css/tailwind.css` (kept for build workflow)
+- Vanilla JS interactions: `public/scripts.js`
 
-- Node.js (v12.x or higher)
-- npm or yarn
+## Prerequisites
 
-## 🛠️ Installation
+- Node.js 18+ recommended
+- npm
 
-1. Install dependencies:
+## Install
+
 ```bash
 npm install
-# or
-yarn install
 ```
 
-## 📁 Project Structure
+## Project Structure
 
-```
-html_app/
+```text
+.
+├── assets/                # Images and static design assets
 ├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── assets/            # Images, fonts, and other static assets
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
+│   ├── site.css           # Active stylesheet used by the website
+│   └── tailwind.css       # Tailwind input file (optional workflow)
+├── pages/
+│   ├── about.html
+│   ├── contact.html
+│   └── services.html
+├── public/
+│   └── scripts.js         # Menu, scroll reveal, form behavior
+├── index.html
+├── package.json
+└── tailwind.config.js
 ```
 
-## 📦 Build for Production
+## CSS Build Scripts
 
-Build the CSS for production:
+The repo includes Tailwind build scripts that compile `css/tailwind.css` into `css/main.css`.
 
 ```bash
 npm run build:css
-# or
-yarn build:css
+npm run watch:css
+```
+
+Note: Pages currently link to `css/site.css`. Tailwind compilation is optional unless you switch page links to the generated file.
+
+## Deployment
+
+This project is connected to GitHub and auto-deploys on Netlify from `main`.
+
+- Production URL: `https://betty-pride.netlify.app`
+- Branch deploy URL: `https://main--betty-pride.netlify.app`
+
+To deploy updates, push commits to `main`:
+
+```bash
+git add -A
+git commit -m "Your update"
+git push origin main
 ```
 
