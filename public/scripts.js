@@ -98,43 +98,31 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const isContactForm = leadForm.dataset.contactForm === "true";
-      if (!isContactForm) {
-        window.setTimeout(function () {
-          leadForm.reset();
-          if (button) {
-            button.disabled = false;
-            button.textContent = originalLabel || "Send";
-          }
-          if (status) {
-            status.textContent = "Thanks. Your request has been received and our team will respond within one business day.";
-          }
-        }, 900);
-        return;
-      }
-
-      const endpoint = leadForm.getAttribute("action") || "https://formsubmit.co/ajax/info@bettypride.com";
       const formData = new FormData(leadForm);
+      const encoded = new URLSearchParams(formData).toString();
 
-      fetch(endpoint, {
+      fetch("/", {
         method: "POST",
-        body: formData,
+        body: encoded,
         headers: {
-          Accept: "application/json"
+          "Content-Type": "application/x-www-form-urlencoded"
         }
       })
         .then(function (response) {
           if (!response.ok) {
             throw new Error("Request failed");
           }
-          return response.json();
         })
         .then(function () {
           leadForm.reset();
-          if (status) {
-            status.textContent = "Thank you. Your request has been submitted successfully. Please check your email for our thank-you message.";
+          if (status && isContactForm) {
+            status.textContent = "Thank you. Your request has been submitted successfully. We will respond within one business day.";
+          }
+          if (status && !isContactForm) {
+            status.textContent = "Thanks. Your request has been received and our team will respond within one business day.";
           }
           if (whatsappPrompt) {
-            whatsappPrompt.hidden = false;
+            whatsappPrompt.hidden = !isContactForm;
           }
         })
         .catch(function () {

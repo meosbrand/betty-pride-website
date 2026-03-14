@@ -97,12 +97,12 @@
 
     <section class="section section-blue reveal">
       <div class="container two-col">
-        <form id="contact-form" class="form-grid contact-page-form" data-lead-form data-contact-form="true" action="https://formsubmit.co/ajax/info@bettypride.com" method="POST" novalidate>
+        <form id="contact-form" class="form-grid contact-page-form" name="contact-request" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" data-lead-form data-contact-form="true" novalidate>
+          <input type="hidden" name="form-name" value="contact-request" />
+          <p hidden>
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
           <h2>Partner With Us</h2>
-          <input type="hidden" name="_subject" value="New Betty Pride Contact Request" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_autoresponse" value="Thank you for contacting Betty Pride. We have received your request and will respond within one business day." />
           <label for="full-name">Name</label><input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="Enter your full name…" required />
           <label for="work-email">Email</label><input id="work-email" name="email" type="email" autocomplete="email" spellcheck="false" placeholder="Enter your work email…" required />
           <label for="project-notes">Message</label><textarea id="project-notes" name="message" autocomplete="off" placeholder="Share your project scope, quantity, and timeline…" required></textarea>
