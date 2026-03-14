@@ -751,6 +751,24 @@ textarea::placeholder {
   font-size: 1.6rem;
 }
 
+.contact-block {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.contact-card .contact-block .icon {
+  margin-inline: 0;
+}
+
+.contact-row .contact-block,
+.contact-card > .contact-block {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
 .contact-block p,
 .contact-block a {
   margin-top: 0.4rem;
