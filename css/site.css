@@ -387,6 +387,7 @@ img {
   border-radius: 14px;
   padding: 1rem;
   box-shadow: 0 8px 18px rgba(0, 4, 8, 0.05);
+  text-align: center;
 }
 
 .section-blue .feature-item {
@@ -398,6 +399,7 @@ img {
 .icon {
   width: 48px;
   height: 48px;
+  margin-inline: auto;
 }
 
 .center-title {
@@ -492,6 +494,7 @@ img {
   border-radius: 14px;
   padding: 0.75rem;
   box-shadow: 0 8px 18px rgba(0, 4, 8, 0.05);
+  text-align: center;
 }
 
 .service-card h3 {
@@ -503,6 +506,14 @@ img {
 .service-card p {
   margin-top: 0.7rem;
   font-size: 1.06rem;
+}
+
+.feature-item p,
+.service-card p {
+  text-align: center;
+  margin-inline: auto;
+  max-width: none;
+  width: 100%;
 }
 
 .logo-row {
@@ -1093,12 +1104,18 @@ h3[id] {
   }
 
   .brand-logo {
-    width: 46px;
-    height: 70px;
+    width: 40px;
+    height: 58px;
   }
 
   .site-header-inner {
-    min-height: 74px;
+    min-height: 64px;
+  }
+
+  .menu-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
   }
 
   .two-col,
@@ -1138,6 +1155,26 @@ h3[id] {
 
   .whatsapp-float-text {
     font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header-inner {
+    min-height: 58px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 48px;
+  }
+
+  .container {
+    width: min(var(--max-w), calc(100% - 1.25rem));
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
   }
 }
 
